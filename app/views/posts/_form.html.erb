@@ -1,0 +1,13 @@
+     <%= form_with model: @post, local: true do |f| %>
+     <div class="form-group">
+      <%= f.label "タイトル" %>
+      <%= f.text_field :title, class: "mb-3 form-control" %>
+      <%= f.text_area :body, id: "editor",size: "60x12" %>
+      <%= f.submit "Create",class: "btn btn-success btn-raised" %>
+      </div>
+     <% end %>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+        <script>
+            var simplemde = new SimpleMDE({ element: document.getElementById("editor") });
+        </script>

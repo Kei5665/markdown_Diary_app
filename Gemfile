@@ -33,6 +33,16 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'sorcery', ' 0.15'
+gem 'annotate'
+gem 'slim-rails' # slim-railsの導入
+gem 'html2slim' # 既存のerbやhtmlファイルをslimに変える
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'font-awesome-sass', '< 5.0.13'
+gem 'redis-rails'
+gem 'faker'
+gem 'carrierwave'
+gem 'mini_magick'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -47,6 +57,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry-byebug' # バグを修正するためのツール
   gem 'pry-rails' # Rails用に使われるデバックツール
+  gem 'better_errors' # デフォルトのエラー画面をわかりやすく成形してくれる
+  gem 'binding_of_caller' # エラー画面にirbをつけてくれる
+
 end
 
 

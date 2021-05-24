@@ -1,0 +1,16 @@
+.card.mb-5.post
+  .card-header
+    .d-flex.align-items-center
+      = post.user.username
+      hr
+      = post.created_at
+      - if current_user&.own?(post)
+        .ml-auto
+          = link_to post_path(post), class: 'mr-3', method: :delete, data: { confirm: '本当に削除しますか？' } do
+            = icon 'far', 'trash-alt', class: 'fa-lg'
+  = link_to edit_post_path(post) do
+    .card-body
+      .post-title
+       = post.title
+      .card-text
+       = post.body
